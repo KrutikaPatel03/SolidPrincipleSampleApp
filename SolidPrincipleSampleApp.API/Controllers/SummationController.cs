@@ -39,8 +39,7 @@ namespace SolidPrincipleSampleApp.API.Controllers
                 // with SummationMethod1 via ISummationMethod interface
 
                 ISummationMethod summationMethod1 = new SummationMethod1();
-                var result = summationMethod1.Sum(arrNumbers);
-
+               
                 //Below lines indicates usage of Dependency Injection
                 SummationResultPrint summationResultPrint = new SummationResultPrint(summationMethod1);
                 return Ok(summationResultPrint.Print(arrNumbers));
